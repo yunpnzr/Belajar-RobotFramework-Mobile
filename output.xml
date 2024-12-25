@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-12-25T23:31:41.520852" rpa="false" schemaversion="5">
+<suite id="s1" name="appDemosStep" source="C:\Belajar QA\Belajar-RobotFramework-Mobile\step\appDemosStep.robot">
+<kw name="Start Session Apps" owner="appDemosPages" type="SETUP">
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-12-25T23:31:41.986827" elapsed="0.000803"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=11.0</arg>
+<arg>deviceName=UwU</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=io.appium.android.apis</arg>
+<arg>appActivity=io.appium.android.apis.ApiDemos</arg>
+<arg>noReset=true</arg>
+<arg>autoGrantPermisson=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-12-25T23:31:41.988151" elapsed="13.036394"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-25T23:31:56.025986" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-25T23:31:55.025019" elapsed="1.001364"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:31:41.985724" elapsed="14.040948"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to open app" line="9">
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-12-25T23:31:56.516914" level="INFO">Current page contains text 'Accessibility'.</msg>
+<arg>Accessibility</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-12-25T23:31:56.028437" elapsed="0.488607"/>
+</kw>
+<kw name="Tap Accessbility" owner="appDemosPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-12-25T23:31:56.518495" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-12-25T23:31:58.663557" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Accessibility"]</msg>
+<arg>${text_accessbitlity}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-12-25T23:31:56.518430" elapsed="2.145249"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:31:56.517845" elapsed="2.146000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-25T23:31:59.664990" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-25T23:31:58.664220" elapsed="1.001029"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-12-25T23:31:59.935098" level="INFO">Current page contains text 'Accessibility Node Provider'.</msg>
+<arg>Accessibility Node Provider</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-12-25T23:31:59.668060" elapsed="0.267174"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:31:56.027042" elapsed="3.911456"/>
+</test>
+<test id="s1-t2" name="As a user, I want to open accessbility node provider" line="14">
+<kw name="Tap Accessbility Node Provider" owner="appDemosPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2024-12-25T23:31:59.947456" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-12-25T23:32:01.551164" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="Accessibility Node Provider"]</msg>
+<arg>${text_accessibility_node_provider}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2024-12-25T23:31:59.947389" elapsed="1.603922"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:31:59.946782" elapsed="1.604697"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2024-12-25T23:32:01.687314" level="INFO">Current page contains text 'Enable TalkBack'.</msg>
+<arg>Enable TalkBack</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2024-12-25T23:32:01.552065" elapsed="0.135389"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:31:59.945716" elapsed="1.743099"/>
+</test>
+<kw name="Close Session App" owner="appDemosPages" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2024-12-25T23:32:02.395953" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="custom_screenshot.png"&gt;&lt;img src="custom_screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/custom_screenshot.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2024-12-25T23:32:01.692486" elapsed="0.703694"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-25T23:32:12.400320" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-25T23:32:02.396498" elapsed="10.004019"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-12-25T23:32:12.401052" elapsed="0.773958"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:32:01.691976" elapsed="11.483221"/>
+</kw>
+<status status="PASS" start="2024-12-25T23:31:41.523284" elapsed="31.652055"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="appDemosStep">appDemosStep</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-25T23:31:56.518495" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2024-12-25T23:31:59.947456" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+</errors>
+</robot>

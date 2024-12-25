@@ -1,0 +1,5 @@
+text_accessbitlity : //android.widget.TextView[@content-desc="Accessibility"]
+text_accessibility_node_provider : //android.widget.TextView[@content-desc="Accessibility Node Provider"]
+text_accessibility_node_Querying : //android.widget.TextView[@content-desc="Accessibility Node Querying"]
+text_accessibility_service : //android.widget.TextView[@content-desc="Accessibility Service"]
+text_custom_view : //android.widget.TextView[@content-desc="Custom View"]
